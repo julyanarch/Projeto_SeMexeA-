@@ -1,0 +1,40 @@
+/* styles.css */
+
+/* Estilo para a sombra da imagem na Hero Section
+  Aumenta o destaque da imagem principal.
+*/
+.custom-img-shadow {
+    box-shadow: 0 20px 25px -5px rgba(29, 78, 216, 0.4), /* Sombra com cor do tema */
+                0 10px 10px -5px rgba(29, 78, 216, 0.2);
+}
+
+/* Estilo para criar a onda na parte inferior da Hero Section
+  Adiciona um toque de design suave entre as seções.
+*/
+.custom-hero-wave {
+    position: relative;
+    top: 4px; /* Ajuste fino para evitar a linha branca */
+    background: white; /* Cor do fundo da próxima seção */
+}
+
+.custom-hero-wave::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Criando uma forma de onda com clip-path */
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+    /* Cor de fundo da Hero Section (secondary-gray do Tailwind) */
+    background-color: #F3F4F6; 
+    transform: scaleY(-1); /* Inverte para a forma da onda vir para baixo */
+}
+
+/* Ajuste fino para o box-shadow da Navbar em navegadores
+  que podem ter problemas com o 'sticky' e o 'shadow-lg' padrão
+*/
+.shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 
+                0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
